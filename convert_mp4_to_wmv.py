@@ -26,8 +26,7 @@ def convert_video():
         messagebox.showerror('Error', f'Failed to convert {src}\n{result.stderr.decode()}')
 
 
-def build_gui():
-    root = tk.Tk()
+def build_gui(root):
     root.title('MP4 to WMV Converter')
 
     frame = tk.Frame(root, padx=10, pady=10)
@@ -44,9 +43,11 @@ def build_gui():
 
 
 def main():
-    build_gui()
+    root = tk.Tk()
+    global file_var
+    file_var = tk.StringVar(master=root)
+    build_gui(root)
 
 
 if __name__ == '__main__':
-    file_var = tk.StringVar()
     main()

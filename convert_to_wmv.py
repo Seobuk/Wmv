@@ -35,8 +35,7 @@ def convert_videos():
     messagebox.showinfo('Done', 'Conversion completed')
 
 
-def build_gui():
-    root = tk.Tk()
+def build_gui(root):
     root.title('WMV Converter')
 
     frame = tk.Frame(root, padx=10, pady=10)
@@ -53,9 +52,11 @@ def build_gui():
 
 
 def main():
-    build_gui()
+    root = tk.Tk()
+    global directory_var
+    directory_var = tk.StringVar(master=root)
+    build_gui(root)
 
 
 if __name__ == '__main__':
-    directory_var = tk.StringVar()
     main()
