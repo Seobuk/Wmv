@@ -19,6 +19,14 @@ A simple Tkinter-based GUI application to convert video files to WMV format.
    supported videos in the directory (and its subdirectories) will be converted
    to `.wmv` files using ffmpeg.
 
+If you want to convert a single MP4 file instead, run `convert_mp4_to_wmv.py`:
+
+```bash
+python convert_mp4_to_wmv.py
+```
+Select an `mp4` file and the script will create a `.wmv` version in the same
+folder.
+
 Supported input extensions include `mp4`, `avi`, `mkv`, `mov`, `flv`, `webm`,
 `mpg`, and `mpeg`.
 
